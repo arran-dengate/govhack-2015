@@ -1,0 +1,24 @@
+{
+    "proxyDomains" : [
+        "nicta.com.au",
+        "gov.au",
+        "csiro.au",
+        "arcgis.com",
+        "argo.jcommops.org",
+        "www.abc.net.au",
+        "geoserver.aurin.org.au",
+        "mapsengine.google.com",
+        "s3-ap-southeast-2.amazonaws.com"
+    ],
+    "initializationUrls" : [
+        "nm"
+    ],
+    "parameters": {
+        "bingMapsKey": null,
+        "disclaimer": {
+            "text": "Disclaimer: The NationalMap must not be used for navigation or precise spatial analysis",
+            "url": "About.html"
+        }
+    }
+}
+
