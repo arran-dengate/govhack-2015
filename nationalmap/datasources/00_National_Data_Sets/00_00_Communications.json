@@ -5,19 +5,85 @@
         {
           "items": [
             {
-              "name": "ABC Photojournalism",
+              "name": "NSW",
               "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
-              "url": "test_ds.csv",
+              "url": "abc_photojournalism_nsw.csv",
+              "type": "csv"
+            },
+            {
+              "name": "ACT",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_act.csv",
+              "type": "csv"
+            },
+            {
+              "name": "WA",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_wa.csv",
+              "type": "csv"
+            },
+            {
+              "name": "SA",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_sa.csv",
+              "type": "csv"
+            },
+            {
+              "name": "NT",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_nt.csv",
+              "type": "csv"
+            },
+            {
+              "name": "TAS",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_tas.csv",
               "type": "csv"
             }
           ],
           "type": "group",
-          "name": "News sites"
+          "name": "By state"
+        },
+        {
+          "items": [
+            {
+              "name": "Fire",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_fire.csv",
+              "type": "csv"
+            },
+            {
+              "name": "Flood",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_flood.csv",
+              "type": "csv"
+            },
+            {
+              "name": "Drought",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_drought.csv",
+              "type": "csv"
+            },
+            {
+              "name": "War",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_war.csv",
+              "type": "csv"
+            },
+            {
+              "name": "Solar",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_solar.csv",
+              "type": "csv"
+            }
+          ],
+          "type": "group",
+          "name": "By keyword"
         }
       ],
       "type": "group",
       "isOpen": true,
-      "name": "National Data Sets"
+      "name": "ABC Photojournalism"
     }
   ]
 }
