@@ -35,6 +35,18 @@
               "type": "csv"
             },
             {
+              "name": "QLD",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_qld.csv",
+              "type": "csv"
+            },
+            {
+              "name": "VIC",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_vic.csv",
+              "type": "csv"
+            },
+            {
               "name": "TAS",
               "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
               "url": "abc_photojournalism_tas.csv",

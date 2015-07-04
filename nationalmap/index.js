@@ -141,7 +141,8 @@ terria.start({
     var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
     var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-    selectBaseMap(terria, allBaseMaps, 'Bing Maps Aerial with Labels');
+    // rdengate: this looks promising
+    selectBaseMap(terria, allBaseMaps, 'Natural Earth II');
 
     // Create the Settings / Map panel.
     var settingsPanel = SettingsPanelViewModel.create({

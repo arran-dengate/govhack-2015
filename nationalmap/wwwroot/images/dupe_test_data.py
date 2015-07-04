@@ -21,6 +21,8 @@ done_csv_nt = os.path.join(base_path, "abc_photojournalism_nt.csv")
 done_csv_sa = os.path.join(base_path, "abc_photojournalism_sa.csv")
 done_csv_wa = os.path.join(base_path, "abc_photojournalism_wa.csv")
 done_csv_tas = os.path.join(base_path, "abc_photojournalism_tas.csv")
+done_csv_qld = os.path.join(base_path, "abc_photojournalism_qld.csv")
+done_csv_vic = os.path.join(base_path, "abc_photojournalism_vic.csv")
 
 done_csv_fire = os.path.join(base_path, "abc_photojournalism_fire.csv")
 done_csv_flood = os.path.join(base_path, "abc_photojournalism_flood.csv")
@@ -38,6 +40,8 @@ nt_lines = []
 sa_lines = []
 wa_lines = []
 tas_lines = []
+qld_lines = []
+vic_lines = []
 
 fire_lines = []
 flood_lines = []
@@ -71,6 +75,8 @@ with open(csv_with_billboards, 'r') as csvfile:
             nt_lines.append(",".join(row) + ",Billboards\n")
             sa_lines.append(",".join(row) + ",Billboards\n")
             wa_lines.append(",".join(row) + ",Billboards\n")
+            qld_lines.append(",".join(row) + ",Billboards\n")
+            vic_lines.append(",".join(row) + ",Billboards\n")
             tas_lines.append(",".join(row) + ",Billboards\n")
             i = i + 1
             continue
@@ -105,6 +111,11 @@ with open(csv_with_billboards, 'r') as csvfile:
         if state == "TAS":
             tas_lines.append(goodline + row_end)
             continue
+        if state == "VIC":
+            vic_lines.append(goodline + row_end)
+            continue
+        if state == "QLD":
+            qld_lines.append(goodline + row_end)
         i = i + 1
 
 print("NSW: " + str(len(nsw_lines)))
@@ -113,6 +124,8 @@ print("NT: " + str(len(nt_lines)))
 print("SA: " + str(len(sa_lines)))
 print("WA: " + str(len(wa_lines)))
 print("TAS: " + str(len(tas_lines)))
+print("QLD: " + str(len(qld_lines)))
+print("VIC: " + str(len(vic_lines)))
 
 print("fire: " + str(len(fire_lines)))
 print("war: " + str(len(war_lines)))
@@ -126,6 +139,8 @@ writeToFile(done_csv_nt, nt_lines)
 writeToFile(done_csv_sa, sa_lines)
 writeToFile(done_csv_wa, wa_lines)
 writeToFile(done_csv_tas, tas_lines)
+writeToFile(done_csv_qld, qld_lines)
+writeToFile(done_csv_vic, vic_lines)
 
 writeToFile(done_csv_fire, fire_lines)
 writeToFile(done_csv_flood, flood_lines)
