@@ -7,7 +7,7 @@
             {
               "name": "ABC Photojournalism",
               "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
-              "url": "abc_photojournalism.csv",
+              "url": "test_ds.csv",
               "type": "csv"
             }
           ],
