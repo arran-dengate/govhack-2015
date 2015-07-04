@@ -1,10 +1,9 @@
 import random
 import re
 
-# The 'summarise' method takes a list of strings as input.
-# It will output a dictionary of words based on the wordcloud algorithm.
+# The 'summarise' method takes a string as input.
 
-def summarise(input):
+def summarise(input, max):
 
     wordList = re.sub("[^\w]", " ",  input).split();
 
@@ -52,7 +51,7 @@ def summarise(input):
     newList = sorted(output, key=lambda k: k['weight'], reverse=True)
 
     #remove all but most frequent 5 words
-    del newList[5:]
+    del newList[max:]
 
     return newList
 
@@ -73,7 +72,7 @@ if __name__ == "__main__":
     # wordList = re.sub("[^\w]", " ",  mystr).split();
 
     # for i in range(0,1000):
-    results = summarise(mystr)
+    results = summarise(mystr, 5)
 
    # results = summarise(['Fire', 'Flood', 'Drought', 'Hail', 'Hail', 'Hail', 'Flood', 'Entertainment'])
    #  results = summarise(['Fire', 'Flood', 'Drought', 'Hail'])
