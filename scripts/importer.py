@@ -8,6 +8,19 @@ import json
 import urllib2
 import re
 
+
+def get_word_list(paragraphs):
+
+    word_list = []
+
+    for paragraph in paragraphs:
+        inner_list = paragraph.split()
+
+        for word in inner_list:
+            word_list.append(word)
+
+    return word_list
+
 # Import file
 
 file = json.loads(open("data.json").read(), encoding="cp1252")
@@ -22,10 +35,24 @@ for index, line in enumerate(file):
     response = urllib2.urlopen(url)
     html = response.read()
     text = re.findall("<p>.*</p>", html)
-    for index, paragraph in enumerate(text):
-        # Get rid of HTML tags.
-        text[index] = re.sub("\<.{1,6}\>", "", paragraph)      # Remove tags
-        text[index] = re.sub("\<a href=.{1,200}\>", "", text[index]) # Remove hyperlinks (might del other stuff, could improve)
-        #print(paragraph)
-    print(text)
+
+    file[index]["words"] = []
+
+    # Remove HTML tags.
+
+    for item, paragraph in enumerate(text):
+
+        text[item] = re.sub("\<.{1,6}\>", " ", paragraph)      # Remove tags
+        text[item] = re.sub("\<a href=.{1,200}\>", " ", text[item]) # Remove hyperlinks (might del other stuff, could improve)
+
+        #print(file[index]["words"])
+        file[index]["words"].append(text[item])
+
+
+
+    file[index]["words"] = get_word_list(file[index]["words"])
+
+    print(file[index]["words"])
+
+
 
