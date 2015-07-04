@@ -5,10 +5,10 @@ import random
 
 def summarise(input):
 
-    output = {} # Initialise empty dictionary
+    output = [] # Initialise empty list
 
     for word in input:
-        output[word] = 1 # In the dictionary, set the frequency of each supplied item to 1
+        output.append({"text":word, "weight":1}) # Create a dictionary for each word, with the word itself and the frequency.
 
     return output
 
@@ -20,3 +20,8 @@ if __name__ == "__main__":
 
     results = summarise(['Fire', 'Flood', 'Drought', 'Hail'])
     print(results)
+
+    # Desired output is a list of dicts, like so:
+    # [{"text": "coffee", "weight": 20296.0},
+    #  {"text": "love", "weight": 15320.0}, {"text": "day", "weight": 6860.0},
+    #  {"text": "like", "weight": 5521.0}]
