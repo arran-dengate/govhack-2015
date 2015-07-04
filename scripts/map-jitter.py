@@ -23,10 +23,10 @@ with open("output.csv", "w") as output_csv:
             writer.writerow(reader.next()) # Skip header row
 
             for index, row in enumerate(reader):
-                if index < 1000: # Was using to limit earlier because it's slow.
+                if index < 10000: # Was using to limit earlier because it's slow.
                     words = []
-                    print(index)
-                    print(row[14])
+                    #print(index)
+                    #print(row[14])
                     lat = row[11]
                     long = row[12]
 

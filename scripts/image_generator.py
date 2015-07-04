@@ -1,19 +1,26 @@
-
 import csv
 import TagCloud as tc
 import wordcloud as wc
+import random
 
-with open('words-sanitised.csv', 'rb') as input_csv:
-        reader = csv.reader(input_csv, delimiter=',', quotechar="\"")
+with open("output.csv", "w") as output_csv:
 
-        for index, row in enumerate(reader):
-            if index < 80000:
+    writer = csv.writer(output_csv)
 
-                words = row[14]
-                summarised_words = wc.summarise(words, 5)
-                t = tc.TagCloud()
-                t.draw(summarised_words, "images/" + str.zfill(str(index), 4) + ".png")
-                print(index)
+    with open('words-sanitised-jittered.csv', 'rb') as input_csv:
+            reader = csv.reader(input_csv, delimiter=',', quotechar="\"")
+
+            writer.writerow(reader.next() + ["Billboards"]) # Skip header row
+
+            for index, row in enumerate(reader):
+                if index < 10:
+
+                    writer.writerow(row + [str.zfill(str(index), 4) + ".png"])
+                    words = row[14]
+                    summarised_words = wc.summarise(words, random.randint(3,6))
+                    t = tc.TagCloud()
+                    t.draw(summarised_words, "images/" + str.zfill(str(index), 4) + ".png")
+                    print(index)
 
 
 
