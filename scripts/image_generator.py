@@ -13,11 +13,11 @@ with open("output.csv", "w") as output_csv:
             writer.writerow(reader.next() + ["Billboards"]) # Skip header row
 
             for index, row in enumerate(reader):
-                if index < 10:
+                if index < 10000:
 
                     writer.writerow(row + [str.zfill(str(index), 4) + ".png"])
                     words = row[14]
-                    summarised_words = wc.summarise(words, random.randint(3,6))
+                    summarised_words = wc.summarise(words, random.randint(7,12))
                     t = tc.TagCloud()
                     t.draw(summarised_words, "images/" + str.zfill(str(index), 4) + ".png")
                     print(index)
