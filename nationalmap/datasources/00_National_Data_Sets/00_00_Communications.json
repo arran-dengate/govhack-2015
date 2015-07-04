@@ -5,14 +5,44 @@
         {
           "items": [
             {
-              "name": "ABC Photojournalism",
+              "name": "NSW",
               "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
-              "url": "abc_photojournalism_bb.csv",
+              "url": "abc_photojournalism_nsw.csv",
+              "type": "csv"
+            },
+            {
+              "name": "ACT",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_act.csv",
+              "type": "csv"
+            },
+            {
+              "name": "WA",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_wa.csv",
+              "type": "csv"
+            },
+            {
+              "name": "SA",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_sa.csv",
+              "type": "csv"
+            },
+            {
+              "name": "NT",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_nt.csv",
+              "type": "csv"
+            },
+            {
+              "name": "TAS",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism_tas.csv",
               "type": "csv"
             }
           ],
           "type": "group",
-          "name": "News sites"
+          "name": "ABC Photojournalism"
         }
       ],
       "type": "group",

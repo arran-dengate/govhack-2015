@@ -1,6 +1,5 @@
 .idea/
 .DS_Store
-images
 wwwroot/build/
 wwwroot/doc/
 error.log
