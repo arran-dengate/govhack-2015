@@ -5,33 +5,14 @@
         {
           "items": [
             {
-              "layers": "public:MyBroadband_Map",
-              "parameters": {
-                "tiled": true
-              },
-              "dataUrlType": "none",
-              "clipToRectangle": true,
-              "description": "[MyBroadband Map](https://www.mybroadband.communications.gov.au)",
-              "name": "Broadband Map",
-              "rectangle": [
-                "96.799393",
-                "-43.598214999057824",
-                "153.63925700000001",
-                "-9.2159219997013"
-              ],
-              "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
-              "url": "https://programs.communications.gov.au/geoserver/ows",
-              "type": "wms",
-              "info": [
-                {
-                  "name": "Licence",
-                  "content": "[Creative Commons Attribution 3.0 Australia (CC BY 3.0 AU)](http://creativecommons.org/licenses/by/3.0/au/)"
-                }
-              ]
+              "name": "ABC Photojournalism",
+              "dataCustodian": "[Australian Broadcasting Corporation](http://www.abc.net.au/)",
+              "url": "abc_photojournalism.csv",
+              "type": "csv"
             }
           ],
           "type": "group",
-          "name": "ABC Photojournalism"
+          "name": "News sites"
         }
       ],
       "type": "group",
