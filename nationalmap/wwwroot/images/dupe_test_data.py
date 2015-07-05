@@ -13,7 +13,7 @@ def writeToFile(fn, lines):
 
 base_path = "/Users/rdengate/Desktop/govhack_2015/govhack-2015/nationalmap/wwwroot"
 #csv_base_path = os.path.join(base_path, "abc_photojournalism.csv")
-csv_base_path = os.path.join(base_path, "words-sanitised-jittered-billboarded.csv")
+csv_base_path = os.path.join(base_path, "words-sanitised-jittered-billboarded-repunctuated.csv")
 csv_with_billboards = os.path.join(base_path, "abc_photojournalism_cp.csv")
 done_csv_nsw = os.path.join(base_path, "abc_photojournalism_nsw.csv")
 done_csv_act = os.path.join(base_path, "abc_photojournalism_act.csv")
