@@ -13,7 +13,7 @@ def writeToFile(fn, lines):
 
 base_path = "/Users/rdengate/Desktop/govhack_2015/govhack-2015/nationalmap/wwwroot"
 #csv_base_path = os.path.join(base_path, "abc_photojournalism.csv")
-csv_base_path = os.path.join(base_path, "words-sanitised-jittered.csv")
+csv_base_path = os.path.join(base_path, "words-sanitised-jittered-billboarded.csv")
 csv_with_billboards = os.path.join(base_path, "abc_photojournalism_cp.csv")
 done_csv_nsw = os.path.join(base_path, "abc_photojournalism_nsw.csv")
 done_csv_act = os.path.join(base_path, "abc_photojournalism_act.csv")
@@ -58,64 +58,61 @@ with open(csv_with_billboards, 'r') as csvfile:
 
     i = 0
     for row, goodline in zip(spamreader, goodlines):
-        goodline = goodline.strip()
         state = row[8].strip()
         keywords = row[10]
         if state == "":
             i = i + 1
             continue
         if i==0:
-            fire_lines.append(",".join(row) + ",Billboards\n")
-            flood_lines.append(",".join(row) + ",Billboards\n")
-            war_lines.append(",".join(row) + ",Billboards\n")
-            drought_lines.append(",".join(row) + ",Billboards\n")
-            solar_lines.append(",".join(row) + ",Billboards\n")
-            nsw_lines.append(",".join(row) + ",Billboards\n")
-            act_lines.append(",".join(row) + ",Billboards\n")
-            nt_lines.append(",".join(row) + ",Billboards\n")
-            sa_lines.append(",".join(row) + ",Billboards\n")
-            wa_lines.append(",".join(row) + ",Billboards\n")
-            qld_lines.append(",".join(row) + ",Billboards\n")
-            vic_lines.append(",".join(row) + ",Billboards\n")
-            tas_lines.append(",".join(row) + ",Billboards\n")
+            fire_lines.append(goodline)
+            flood_lines.append(goodline)
+            war_lines.append(goodline)
+            drought_lines.append(goodline)
+            solar_lines.append(goodline)
+            nsw_lines.append(goodline)
+            act_lines.append(goodline)
+            nt_lines.append(goodline)
+            sa_lines.append(goodline)
+            wa_lines.append(goodline)
+            qld_lines.append(goodline)
+            vic_lines.append(goodline)
+            tas_lines.append(goodline)
             i = i + 1
             continue
-        row_end = ',"images/%s.png"\n' % str(i).zfill(4)
-
         if keywords.lower().find("war") != -1:
-            war_lines.append(goodline + row_end)
+            war_lines.append(goodline)
         if keywords.lower().find("fire") != -1:
-            fire_lines.append(goodline + row_end)
+            fire_lines.append(goodline)
         if keywords.lower().find("flood") != -1:
-            flood_lines.append(goodline + row_end)
+            flood_lines.append(goodline)
         if keywords.lower().find("drought") != -1:
-            drought_lines.append(goodline + row_end)
+            drought_lines.append(goodline)
         if keywords.lower().find("solar") != -1:
-            solar_lines.append(goodline + row_end)
+            solar_lines.append(goodline)
 
         if state == "NSW":
-            nsw_lines.append(goodline + row_end)
+            nsw_lines.append(goodline)
             continue
         if state == "ACT":
-            act_lines.append(goodline + row_end)
+            act_lines.append(goodline)
             continue
         if state == "NT":
-            nt_lines.append(goodline + row_end)
+            nt_lines.append(goodline)
             continue
         if state == "SA":
-            sa_lines.append(goodline + row_end)
+            sa_lines.append(goodline)
             continue
         if state == "WA":
-            wa_lines.append(goodline + row_end)
+            wa_lines.append(goodline)
             continue
         if state == "TAS":
-            tas_lines.append(goodline + row_end)
+            tas_lines.append(goodline)
             continue
         if state == "VIC":
-            vic_lines.append(goodline + row_end)
+            vic_lines.append(goodline)
             continue
         if state == "QLD":
-            qld_lines.append(goodline + row_end)
+            qld_lines.append(goodline)
         i = i + 1
 
 print("NSW: " + str(len(nsw_lines)))
