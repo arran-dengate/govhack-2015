@@ -33,14 +33,14 @@ with open("output.csv", "w") as output_csv:
 
     writer = csv.writer(output_csv)
 
-    with open('data.csv', 'rb') as input_csv:
+    with open('words-sanitised-jittered-billboarded.csv', 'rb') as input_csv:
             reader = csv.reader(input_csv, delimiter=',', quotechar="\"")
 
-            writer.writerow(reader.next() + ["Words"])
+            writer.writerow(reader.next() + ["Article"])
             #reader.next() # Skip the header row
 
-            for index, row in enumerate(reader):
-                if index < 100000: # Was using to limit earlier because it's slow.
+            for index, row in enumerate(reader):                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                if index < 200000: # Was                                                                                                                                                                        using to limit earlier because it's slow.
                     counter += 1
                     words = []
                     url = row[1]
